@@ -38,8 +38,8 @@ import com.example.deliveryapp.R
 import com.example.deliveryapp.domain.model.Advertisement
 import com.example.deliveryapp.domain.model.FoodItem
 import com.example.deliveryapp.domain.model.Restaurant
-//import com.example.deliveryapp.presentation.components.RestaurantCard
-//import com.example.deliveryapp.presentation.components.SearchBar
+import com.example.deliveryapp.presentation.components.RestaurantCard
+import com.example.deliveryapp.presentation.components.SearchBar
 import com.example.deliveryapp.presentation.home.components.ChipBar
 import com.example.deliveryapp.presentation.util.Screen
 import java.util.*
@@ -77,14 +77,14 @@ fun Home(
             GreetingSection()
             Spacer(modifier = Modifier.height(24.dp))
         }
-//        item {
-//            Column(
-//                modifier = Modifier.padding(8.dp, 0.dp)
-//            ) {
-//                SearchBar()
-//            }
-//            Spacer(modifier = Modifier.height(16.dp))
-//        }
+        item {
+            Column(
+                modifier = Modifier.padding(8.dp, 0.dp)
+            ) {
+                SearchBar()
+            }
+            Spacer(modifier = Modifier.height(16.dp))
+        }
         item {
             AdSection(homeScreenState.adsList)
             Spacer(modifier = Modifier.height(16.dp))
@@ -107,21 +107,21 @@ fun Home(
             Spacer(modifier = Modifier.height(8.dp))
             ChipBar()
         }
-//        item {
-//            MainSection()
-//        }
-//        items(homeScreenState.restaurantList.size) {
-//            RestaurantCard(
-//                restaurant = homeScreenState.restaurantList[it],
-//                modifier = Modifier
-//                    .clip(RoundedCornerShape(8.dp))
-//                    .clickable {
-//                        viewModel.onEvent(HomeScreenEvent.SelectRestaurant(homeScreenState.restaurantList[it]) {
-//                            navController.navigate(Screen.RestaurantDetails.route)
-//                        })
-//                    }
-//            )
-//        }
+        item {
+            MainSection()
+        }
+        items(homeScreenState.restaurantList.size) {
+            RestaurantCard(
+                restaurant = homeScreenState.restaurantList[it],
+                modifier = Modifier
+                    .clip(RoundedCornerShape(8.dp))
+                    .clickable {
+                        viewModel.onEvent(HomeScreenEvent.SelectRestaurant(homeScreenState.restaurantList[it]) {
+                            navController.navigate(Screen.RestaurantDetails.route)
+                        })
+                    }
+            )
+        }
         item {
             ThankYouSection()
         }
