@@ -27,7 +27,7 @@ import androidx.navigation.compose.rememberNavController
 //import com.example.deliveryapp.presentation.cart.Cart
 //import com.example.deliveryapp.presentation.details.RestaurantDetail
 //import com.example.deliveryapp.presentation.history.History
-//import com.example.deliveryapp.presentation.home.Home
+import com.example.deliveryapp.presentation.home.Home
 import com.example.deliveryapp.presentation.home.components.FoodikeBottomNavigation
 import com.example.deliveryapp.presentation.login.LoginScreen
 //import com.example.deliveryapp.presentation.onboarding.OnBoarding
@@ -50,7 +50,7 @@ fun NavigationGraph(
         composable(
             route = Screen.Onboarding.route,
         ) {
-           // OnBoarding(navController = navController)
+          //  OnBoarding(navController = navController)
         }
         composable(
             route = Screen.LoginScreen.route,
@@ -61,17 +61,17 @@ fun NavigationGraph(
         composable(
             route = Screen.Home.route
         ) {
-           // Home(navController = navController, scrollState = scrollState)
+            Home(navController = navController, scrollState = scrollState)
         }
         composable(
             route = Screen.History.route
         ) {
-           // History(navHostController = navController)
+          //  History(navHostController = navController)
         }
         composable(
             route = Screen.Cart.route
         ) {
-           // Cart(navController = navController)
+          //  Cart(navController = navController)
         }
         composable(
             route = Screen.Profile.route
@@ -82,14 +82,14 @@ fun NavigationGraph(
         composable(
             route = Screen.Onboarding.route,
         ) {
-           // OnBoarding(navController = navController)
+          //  OnBoarding(navController = navController)
         }
         composable(
             route = Screen.RestaurantDetails.route,
         ) {
-          //  RestaurantDetail(
+           // RestaurantDetail(
               //  navController = navController
-         //   )
+           // )
         }
     }
 
